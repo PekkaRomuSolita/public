@@ -10,7 +10,7 @@ $jsonContent = Get-Content -Path $jsonFilePath -Raw | ConvertFrom-Json
 
 $baseFileName = "$($jsonContent.info.name).rest".replace(" ", "_")
 
-$outputFilePath = Join-Path (Get-Item $jsonFilePath).Directory "rest" "$baseFileName"
+$outputFilePath = Join-Path (Get-Item $jsonFilePath).Directory "$baseFileName"
 
 $output = @()
 
